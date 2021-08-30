@@ -1,0 +1,258 @@
+/* GLOBAL */
+
+/* gradient colors */
+$Light-Magenta: hsl(293, 100%, 63%);
+$Light-Violet: hsl(264, 100%, 61%);
+/* primary colors */ 
+$Dark-Grayish-Violet: hsl(270, 7%, 64%);
+/* secondary colors */
+$White: hsl(0, 0%, 100%);
+$Light-Grayish-Violet: hsl(270, 20%, 96%);
+$Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+$Very-Light-Magenta: hsl(289, 100%, 72%);
+/* text colors */
+$Pale-Violet: hsl(276, 100%, 81%);
+$Moderate-Violet: hsl(276, 55%, 52%);
+$Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+$Grayish-Blue: hsl(206, 6%, 79%);
+$Very-Dark-Desaturated: hsl(271, 36%, 24%);
+$Dark-Grayish-Violet: hsl(270, 7%, 64%);
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Rubik', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-color: $Light-Grayish-Violet;
+    }
+
+    .chat-box {
+        padding: .5rem 1.25rem .5rem 1rem;
+        margin: 1rem 0;
+        border-radius: 8px;
+        min-height: 4.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+}
+
+
+/* MAIN */
+main {
+    width: 100%;
+    height: 100%;
+
+    section#bg-container {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-between;
+
+        div#purple-container,
+        div#transparent-container {
+            > div {
+                height: 80%;
+                width: 70rem;
+                 
+                background: linear-gradient(0deg, $Light-Violet 0%, $Light-Magenta 73%);
+             }
+        }
+
+        div#purple-container {
+            div.purple-element {
+                border-radius: 0 0 100% 100%;
+                margin-left: -20rem;                  
+            }
+        }
+
+        div#transparent-container {
+            display: flex;
+            align-items: flex-end;
+
+            div.transparent-element {
+                border-radius:100% 100% 0 0;
+                opacity: 0.03;
+                position: fixed;
+                right: 0;
+                margin-right: -20rem;
+            }
+        }
+    }
+
+    section#main-container {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+
+        width: 100vw;
+        height: 100vh;
+
+        
+
+        div.main-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            div.cellphone {
+                width: 35rem;
+                height: 70rem;
+                margin: 0 10rem 0 20rem;
+                border: 20px solid $White;
+                border-radius: 36px;
+
+                div.camera {
+                    width: 50%;
+                    background-color: $White;
+                    color: transparent;
+                    padding: 1.5rem 0;
+                    margin: auto;
+                    border-radius: 32px;
+                    margin-top: -2rem;
+                    position: relative;
+                    z-index: 10;
+                    
+                }
+
+                header {
+                    position: relative;
+                    z-index: 9;
+                    top: -2.2rem;
+                    background: linear-gradient(90deg, $Light-Violet 0%, $Light-Magenta 73%);
+                    height: 15%;
+                    border-radius: 16px 16px 0 0;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    div.header-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        width: 100%;
+                        height: 50%;
+                        margin-top: 3rem;
+
+                        color: $White;
+
+                         > img {
+                            width: 2rem;
+                        }
+
+                        div.contact-data {
+                            display: flex;
+                            align-items: center;
+                            margin: 0 6rem 0 .5rem;
+
+                            img {
+                                width: 4rem;
+                                border: 2px solid $White;
+                                border-radius: 50%;
+                            }
+
+                            article {
+                                margin-left: 1.5rem;
+
+                                p {
+                                    margin-top: .5rem;
+                                    color:  hsl(276, 100%, 81%);
+                                }
+                            }
+                        }
+
+                        img#options {
+                            width: 1.5rem;
+                        }
+
+
+                    }
+                }
+
+                div.cellphone-body {
+                    height: 85%;
+                    background-color: $Light-Grayish-Violet;
+                    margin-top: -2.2rem;
+                    padding: 1rem;
+
+                    div.contact-messages {
+                       width: 65%;
+                      
+
+                       div.contact-message {
+                            background-color: hsl(276, 100%, 93%);
+                            color: $Moderate-Violet;
+                       }
+                    }
+
+                    div.my-images {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin: 2.5rem 0 1rem 0;
+
+                        > img:first-child {
+                            margin: 0;
+                        }
+                        > img {
+                            width: 20%;
+                            border-radius: 18px;
+                            margin-left: 1rem;
+                        }
+                    }
+
+                    div.my-messages {
+                        display: flex;
+                        justify-content: flex-end;
+                        flex-wrap: wrap;
+
+                        div.my-message {
+                            min-width: 35%;
+                            max-width: 60%;
+                            background: $White;
+                            color: $Desaturated-Dark-Violet;
+                            text-align: end;
+                        }
+                    }
+                }
+            }
+
+            > article {
+                width: 65rem;
+    
+                h1 {
+                    font-size: 5.4rem;
+                    font-weight: 500;
+                    margin-bottom: 3rem;
+                }
+    
+                p {
+                    line-height: 1.5;
+                    font-size: 2.4rem;
+                    color: $Dark-Grayish-Violet;
+                }
+            }
+        }
+        
+    }
+}
